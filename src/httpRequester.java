@@ -19,8 +19,8 @@ public class httpRequester {
      con.setRequestProperty("User-Agent", USER_AGENT);
 
      int responseCode = con.getResponseCode();
-     System.out.println("\nSending 'GET' request to URL : \n" + url);
-     System.out.println("\nResponse Code : " + responseCode);
+     //System.out.println("\nSending 'GET' request to URL : \n" + url);
+     //System.out.println("\nResponse Code : " + responseCode);
 
      BufferedReader in = new BufferedReader(
              new InputStreamReader(con.getInputStream()));
