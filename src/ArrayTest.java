@@ -16,8 +16,9 @@ public class ArrayTest {
 
         ArrayList<Weather> wetterListe = new ArrayList<Weather>();
 
-        CSVReader reader = new CSVReader(new FileReader("D:/OpenGeoDB_bundesland_plz_ort_de.csv"));
+        CSVReader reader = new CSVReader(new FileReader("lib/OpenGeoDB_bundesland_plz_ort_de.csv"));
         String [] PLZ;
+        //TODO: Liest nur jede zweite PLZ ein, in der while bedingung wird schon eins überlesen
         while((PLZ = reader.readNext()) != null) {
 
             PLZ = reader.readNext();
