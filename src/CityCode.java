@@ -22,7 +22,7 @@ public class CityCode {
 		if(response.contains("<error>")) return null;
 		String cityCode = response.substring(response.indexOf("<city_code>")+11, response.indexOf("</city_code>"));
 		
-		System.out.println("Citycode: "+cityCode+"\n");
+		System.out.println("Citycode: "+cityCode);
 		return cityCode;
 	}
 

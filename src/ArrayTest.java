@@ -3,6 +3,7 @@ import com.opencsv.CSVReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Moritz on 24.11.2015.
@@ -17,11 +18,12 @@ public class ArrayTest {
         ArrayList<Weather> wetterListe = new ArrayList<Weather>();
 
         CSVReader reader = new CSVReader(new FileReader("lib/OpenGeoDB_bundesland_plz_ort_de.csv"));
-        String [] PLZ;
-        //TODO: Liest nur jede zweite PLZ ein, in der while bedingung wird schon eins überlesen
-        while((PLZ = reader.readNext()) != null) {
 
-            PLZ = reader.readNext();
+        //TODO: Bricht bei dem Nachfolger der PLZ = 79429 ab.
+        List<String[]> PLZArray = reader.readAll();
+        for (String[] PLZ : PLZArray){
+
+
 
             //for Schleife über alle Städte abhier beginnen
             String code = test.getCityCode(PLZ[0]);
@@ -35,7 +37,7 @@ public class ArrayTest {
                 try {
                     Weather wettertest = http.getWeather(code);
 
-                    System.out.println(wettertest);
+                    System.out.println(wettertest+"\n");
 
                     if (wettertest.getError() == false) {
 
