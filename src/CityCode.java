@@ -14,7 +14,7 @@ public class CityCode {
 		
     	//URL zusammenbauen
 		String url = "http://api.wetter.com/location/index/search/"+name+"/project/"+projectName+"/cs/"+hash;
-		
+
 		httpRequester test = new httpRequester();
 		String response = test.getResponse(url);
 		
