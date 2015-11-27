@@ -9,9 +9,8 @@ public class test {
     	//Gross-/Kleinschreibung ist bei den Städtennamen wichtig
     	
     	//for Schleife über alle Städte abhier beginnen
-    	String code = test.getCityCode("79539");
+    	String code = test.getCityCode("76133");
 
-    	System.out.println("Get City Code:");
         WeatherRequester http = new WeatherRequester();
 
         System.out.println("Get Weather:");
