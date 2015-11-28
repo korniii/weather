@@ -16,7 +16,7 @@ public class WeatherRequester {
         httpRequester http = new httpRequester();
         String xmlSource = http.getResponse(url);
 
-        System.out.println(url);
+        //System.out.println(url);
 
                 //errortest
         boolean errortest = false;
@@ -44,9 +44,8 @@ public class WeatherRequester {
             //Mittelwert aus den Temperaturen bilden
             int temp = (mintemp+maxtemp)/2;
 
-            Weather w = new Weather(name, PLZ, temp, date, errortest);
+            return new Weather(name, PLZ, temp, date, errortest);
 
-            return w;
 
         }
 

@@ -20,10 +20,8 @@ public class CityCode {
 		
 		//CityCode rausziehen
 		if(response.contains("<error>")) return null;
-		String cityCode = response.substring(response.indexOf("<city_code>")+11, response.indexOf("</city_code>"));
-		
-		System.out.println("Citycode: "+cityCode);
-		return cityCode;
+		return (response.substring(response.indexOf("<city_code>")+11, response.indexOf("</city_code>")));
+
 	}
 
 }

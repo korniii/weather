@@ -15,11 +15,10 @@ public class ArrayTest {
         CityCode test = new CityCode();
         //Gross-/Kleinschreibung ist bei den Städtennamen wichtig
 
-        ArrayList<Weather> wetterListe = new ArrayList<Weather>();
+        ArrayList<Weather> wetterListe = new ArrayList<>();
 
         CSVReader reader = new CSVReader(new FileReader("lib/OpenGeoDB_bundesland_plz_ort_de.csv"));
 
-        //TODO: Bricht bei dem Nachfolger der PLZ = 79429 ab.
         List<String[]> PLZArray = reader.readAll();
         for (String[] PLZ : PLZArray){
 
@@ -39,7 +38,7 @@ public class ArrayTest {
 
                     System.out.println(wettertest+"\n");
 
-                    if (wettertest.getError() == false) {
+                    if (!wettertest.getError()) {
 
                         wetterListe.add(wettertest);
                         //System.out.println(wetterListe.get(wetterListe.size()-1));

@@ -32,7 +32,7 @@ public class Weather {
     public boolean getError()  {return error;}
     
     public String toString(){
-    	return ("Name: " + name +"\nPLZ: "+PLZ+"\nTemperatur: "+temp+" °C\nDatum: "+date);
+    	return ("Name: " + name +"\nPLZ: "+PLZ+"\nTemperatur: "+temp+" °C\nDatum: "+date+"\n");
     }
     
     
